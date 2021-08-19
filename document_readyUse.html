@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello JQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  
+    <style>
+        ul li {
+            color: red;
+        }
+
+        .ColorChange {
+            color: blue;
+        }
+    </style>
+    <script>
+        //jQuery('ul li').css('color', 'green');  .css is changing the color of text directly.
+        //$('ul li').css('color', 'green');  $ is also used in place of jQuery
+
+        //$(document).ready(function () {
+        //    $('ul li').addClass('ColorChange');// Here ColorChange class is using as reference class for changing the text color.
+        //    $('ol li').addClass('ColorChange');
+        //});
+
+        $(function () {
+            $('ul li:first').addClass('ColorChange');// Here ColorChange class is using as reference class for changing the text color.
+            $('ol li:last').addClass('ColorChange');
+        }); // similer to $(document).ready(); method will execute when document is ready.
+        
+    </script>
+</head>
+<body>
+
+    <ul>
+        <li>Hello</li>
+        <li>Hello 1</li>
+        <li>Hello 2</li>
+    </ul>  <!--unordered list-->
+    <ol>
+        <li>Hello</li>
+        <li>Hello 1</li>
+        <li>Hello 2</li>
+    </ol> <!--ordered list-->
+   
+</body>
+</html>
