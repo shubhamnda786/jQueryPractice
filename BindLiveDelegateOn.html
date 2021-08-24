@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Bind Live Delegate ON</title>
+</head>
+<body>
+    <div class="container">
+        <h3>click here</h3>
+        <h3>click here</h3>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function (){
+           /* $('h3').bind('click',function(){
+                   $(this).clone().appendTo('body'); 
+            });   not in use now */
+
+           /* $('h3').live('click', function () {
+                $(this).clone().appendTo('body');
+            }); not in use now */
+
+          /*  $('h3').delegate('click', function () {
+                $(this).clone().appendTo('body');
+            }); not in use now */
+
+         /*   $('h3').on('click', function () {
+                $(this).clone().appendTo('body');
+            }); in use */
+
+            $('div.container').on('click','h3', function () {
+                $(this).clone().appendTo('.container');
+            });
+        });
+
+    </script>
+</body>
+</html>

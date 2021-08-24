@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Events Use</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <dl>
+        <dt>What are your hours?</dt>
+        <dd>We are open 24/7.</dd>
+        <dt>What are your hours?</dt>
+        <dd>We are open 24/7.</dd>
+        <dt>What are your hours?</dt>
+        <dd>We are open 24/7.</dd>
+        <dt>What are your hours?</dt>
+        <dd>We are open 24/7.</dd>
+    </dl>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function () {
+
+            $('dd').filter(':nth-child(n+4)').addClass("hide");
+
+            $('dl').on('mouseenter','dt', function () {
+                /*$(this)
+                    .next()
+                        .show()
+                        .siblings('dd').hide(); */
+               /* $(this)
+                    .next()
+                        .show()
+                        .siblings('dd').slideUp(300); */
+                $(this)
+                    .next()
+                        .slideDown(200)
+                        .siblings('dd').slideUp(200);
+                //$(this).next().show();
+            });
+        });
+    </script>
+</body>
+</html>
